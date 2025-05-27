@@ -1,0 +1,13 @@
+# Start from the official Jenkins inbound agent image
+FROM jenkins/inbound-agent:latest
+
+# Switch to root to install software
+USER root
+
+# Install Python and pip
+RUN apt-get update && \
+    apt-get install -y python3 python3-pip && \
+    apt-get clean
+
+# Switch back to the default Jenkins user
+USER jenkins
