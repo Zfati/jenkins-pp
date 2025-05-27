@@ -10,6 +10,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                echo "Building.."
+                sh '''
                 cd myapp
                 python3 -m venv venv
                 source venv/bin/activate
