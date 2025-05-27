@@ -41,3 +41,6 @@ https://stackoverflow.com/questions/47709208/how-to-find-docker-host-uri-to-be-u
 docker run -d --restart=always -p 2376:2375 --network jenkins -v /var/run/docker.sock:/var/run/docker.sock alpine/socat tcp-listen:2375,fork,reuseaddr unix-connect:/var/run/docker.sock
 docker inspect <container_id> | grep IPAddress
 ```
+
+# Pulling my docker-agent with python installed
+docker pull barzfati/jenkins-inbound-agent-python:latest
